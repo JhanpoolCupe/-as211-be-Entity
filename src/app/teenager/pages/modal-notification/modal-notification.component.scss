@@ -1,0 +1,26 @@
+.cabecera-modalRegistro {
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  background-color: #3f51b5;
+  color: #fff;
+}
+h1{
+  margin-top: 10px;
+}
+.formulario {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  justify-content: center;
+}
+.button-container {
+  display: flex; /* Usa un contenedor flexible para alinear los botones uno al lado del otro */
+  text-align: center;
+}
+.btn-cancelar{
+  border: 3px;
+  border-color:#3f51b5;
+  text-decoration-color: #3f51b5;
+  background: white;
+}

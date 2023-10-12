@@ -1,0 +1,40 @@
+<div class="cabecera-modalRegistro">
+  <br><br>
+
+  <H1>NUEVO REGISTRO</H1>
+</div>
+<br>
+<div class="formulario">
+  <form>
+    <div class="mb-3">
+      <label for="example-nombre" class="form-label">Nombre del Funcionario:</label>
+      <input type="email" class="form-control" id="example-nombre" aria-describedby="emailHelp" [(ngModel)]="idfuncionario" name="nombre_funcionario">
+    </div>
+    <div class="mb-3">
+      <label for="example-ruc" class="form-label">Entidad cooperativa:</label>
+      <input type="ruc" class="form-control" id="example-ruc" [(ngModel)]="identidad" name="nombre_entidad">
+    </div>
+    <mat-form-field>
+      <mat-label>Acciones</mat-label>
+      <mat-select [(ngModel)]="accionSeleccionada" name="accionSeleccionada">
+        <mat-option *ngFor="let food of foods" [value]="food.value">
+          {{food.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="fecha" name="fecha">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <div class="mb-3">
+      <label for="example-documento" class="form-label">Documento:</label>
+      <input type="documento" class="form-control" id="example-documento" [(ngModel)]="documento" name="documento">
+    </div>
+    <div class="button-container">
+      <button mat-flat-button color="primary" (click)="onSave()">Guardar</button>
+      <button mat-raised-button color="primary" (click)="onClose()">Cancelar</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,31 @@
+<br>
+<div class="cabecera">
+  <h1 class="titulo">NOTIFICACIONES</h1>
+</div>
+<br>
+<button  mat-raised-button color="primary" (click)="openDialog()">
+  <mat-icon aria-hidden="false" aria-label="add_circle_outline" fontIcon="add_circle_outline"></mat-icon>
+  Nuevo Registro</button>
+<br>
+<br>
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">FUNCIONARIO</th>
+    <th scope="col">ENTIDAD COOPERATIVA</th>
+    <th scope="col">MOTIVO</th>
+    <th scope="col">FECHA</th>
+    <th scope="col">DOCUMENTO</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let item of data">
+    <td>{{item.name_funcionary}}</td>
+    <td>{{item.name_entities}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.date_notification}}</td>
+    <td><a [href]="item.url" target="_blank">{{ item.url }}</a></td>
+    
+  </tr>
+  </tbody>
+</table>

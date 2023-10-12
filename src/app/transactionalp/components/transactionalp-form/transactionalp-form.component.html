@@ -1,0 +1,21 @@
+<form [formGroup]="registroForm">
+
+    <mat-form-field>
+      <input matInput formControlName="id_programs" placeholder="Program">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="id_activities" placeholder="Actividad">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="date_asignation" placeholder="Fecha de Asignación">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <input matInput formControlName="direction" placeholder="Dirección">
+    </mat-form-field>
+
+  
+    <button mat-raised-button color="primary" type="submit" (ngSubmit)="registrarTransaccional()">Registrar</button>
+  </form>
